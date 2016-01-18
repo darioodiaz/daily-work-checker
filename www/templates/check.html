@@ -1,0 +1,19 @@
+<ion-view view-title="{{ctrl.title}}">
+  <ion-content>
+	  <form name="form" ng-submit="ctrl.check($event)">
+	  	<div class="list">
+	  		<label class="item item-input">
+				<span class="input-label">{{ ctrl.datepickerConf.inputDate | date: 'dd/MM/yyyy' || 'Date' }}</span>
+	  			<ionic-datepicker input-obj="ctrl.datepickerConf">
+	  				<button type="button" class="button button-block button-positive ion-calendar"> </button>
+	  			</ionic-datepicker>
+	  		</label>
+	  		<label class="item item-input">
+	  			<span class="input-label">{{ ctrl.checkTime | date: 'hh:mm' || 'Hour' }}</span>
+	  			<button ng-click="ctrl.openTimeSelector()" type="button" class="button button-positive ion-clock"> </button>
+	  		</label>
+	  	</div>
+	  	<button type="submit" class="button button-block button-positive">{{ctrl.title}}</button>
+	  </form>
+  </ion-content>
+</ion-view>

@@ -19,7 +19,7 @@ function DailyWorkService($window, dailyWorkConstants, $q) {
       if (data[key]) {
         defer.reject('You have already did checkin.');
       } else {
-        data[key] = { checkin: parseInt(time).getHours()};
+        data[key] = { checkin: time.getHours() };
         $window.localStorage.dailyWorkCheckerData = JSON.stringify(data);
         defer.resolve('success');
       }
@@ -29,7 +29,7 @@ function DailyWorkService($window, dailyWorkConstants, $q) {
       } else if ('checkout' in data[key]) {
         defer.reject('You have already did checkout.');
       } else {
-        data[key].checkout = parseInt(time.getHours());
+        data[key].checkout = time.getHours();
         data[key].hours = data[key].checkout - parseInt(data[key].checkin);
         $window.localStorage.dailyWorkCheckerData = JSON.stringify(data);
         defer.resolve('success');

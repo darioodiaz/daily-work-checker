@@ -2,7 +2,7 @@
 A simple ionic application to do checkin and checkout of your daily work, and calculate how many hours did you work
 
 # How to install?
-Clone this repo and run ´npm install´ and ´bower install´ then ´ionic serve´
+Clone this repo and run `npm install`, `bower install` and `cordova plugin add https://github.com/VitaliiBlagodir/cordova-plugin-datepicker.git` then `ionic serve`
 
 # How it works?
 When you start your work day, go to checkin tab and adjust the date and time (if you do it late) and do a checkin. At the end of the day, go to checkout tab (if the hour differs of your work checkout adjust it) and do a checkout.

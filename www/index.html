@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <title>Daily Work Checker</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -18,7 +19,10 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
     <script src="cordova.js"></script>
+    <script src="lib/stacktrace-js/dist/stacktrace.min.js"></script>
+
 
     <!-- your app's js -->
     <script src="js/dailyWorkCheckerInitiator.js"></script>
@@ -26,8 +30,12 @@
     <script src="js/check.controller.js"></script>
     <script src="js/summary.controller.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/googleSpreadSheet.service.js"></script>
+    <script src="js/gapiFunctions.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=bootstrapApp"></script>
+
   </head>
-  <body ng-app="dailyWorkChecker">
+  <body>
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>

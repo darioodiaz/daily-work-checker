@@ -4,7 +4,6 @@ angular.module('dailyWorkChecker.controllers')
 CheckCtrl.$inject = ['DailyWorkService', '$ionicPopup', '$state', '$scope', 'dailyWorkConstants', '$cordovaDatePicker'];
 function CheckCtrl(dailyWorkService, $ionicPopup, $state, $scope, dailyWorkConstants, $cordovaDatePicker) {
   var ctrl = this;
-  ctrl.timePattern = '\\d+';
   ctrl.datepickerConf = {
     inputDate: new Date(), mondayFirst: false, templateType: 'popup', showTodayButton: 'true',
     callback: onDateSelect, dateFormat: 'dd-MM-yyyy', closeOnSelect: true,

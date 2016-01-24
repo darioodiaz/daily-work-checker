@@ -7,7 +7,7 @@ function dailyWorkCheckerStateInitiator($stateProvider) {
 			'summary': {
 				templateUrl: 'templates/summary.html',
 				controller: 'SummaryCtrl', 
-				controllerAs: 'ctrl' 
+				controllerAs: 'ctrl'
 			} 
 		}
 	});

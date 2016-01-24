@@ -9,9 +9,13 @@ When you start your work day, go to checkin tab and adjust the date and time (if
 
 In the summary tab you will see how many hours you work in that month
 
+# Addon
+Now when you do a checkout its add on your custom spreadsheet in google drive, its possible because I do a google script that insert rows in a spreadsheet, so when you install/run the app for first time, it'll need access to your google account to authorize that function. In `googleSpreadSheet.service.js` file you'll find the constant `SHEET_ID`, replace that with your sheet id.
+
 TODO list:
 
 - Finish summary tab
 - Test some checkin and checkout 'cheats'
 - Browse between months to edit or complete your worked days
+- Add localStorage option if no internet access or no google authorization
 
